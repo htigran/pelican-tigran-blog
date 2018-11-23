@@ -1,0 +1,94 @@
+
+#comments, #comments li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #comments li {
+    list-style: none;
+  }
+  
+  .photo {
+    margin-bottom: 10px;
+  }
+  
+  .social-buttons button {
+    margin-top: 5px;
+  }
+  
+  .carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+  
+  /* body {
+    padding-top: 54px;
+  } */
+  
+  /* @media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+    }
+  } */
+  
+  .business-header {
+    height: 50vh;
+    min-height: 300px;
+    background: url('http://placehold.it/1920x400') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  
+  .card {
+    height: 100%;
+  }
+  
+  .no-border {
+    border: 0;
+  }
+  
+  .lead {
+    font-weight: 500;
+  }
+  
+  .btn-facebook {
+    background: #3b5998;
+    color: white;
+    opacity:1; 
+  }
+  
+  .btn-facebook:hover {
+    color: white;
+  }
+  
+  .control-label {
+      display: none;
+  }
+  
+  .page-heading h1 {
+      font-size: 18px;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 60px;
+  }
+}

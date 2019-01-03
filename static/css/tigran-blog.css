@@ -89,6 +89,6 @@ h6 {
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
-    font-size: 60px;
+    font-size: 54px;
   }
 }

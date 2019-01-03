@@ -39,6 +39,27 @@
     </header>
 {% endblock header %}
 
+{% block about %}
+
+<div class="well">
+    <p class="lead">
+        Something...
+    </p>
+</div>
+<div class="form-group">
+    <div class="col-md-12 text-right">
+        <a class="btn btn-sm btn-outline-secondary" href="cv/tigran_cv.pdf" target="_blank" >
+            Download My CV &raquo;
+        </a>
+            
+        <a class="btn btn-sm btn-outline-secondary" href="http://www.linkedin.com/in/thetigran" target="_blank" >
+            Visit My Linkedin Profile &raquo;
+        </a>
+    </div>
+</div>
+
+{% endblock about %}
+
 {% block content %}
     {% if INTRO_CONTENT %}
         <div class="row intro-content">
@@ -77,3 +98,24 @@
 
     {% include "pagination.html" %}
 {% endblock content %}
+
+
+{% block contacts %}
+
+<div class="well">
+    <p class="lead">
+        Do you have any question? Please use the below contact form and send a message. I'll reply you as quick as possible.
+    </p>
+</div>
+<div class="contact-form">
+    <form class="form-horizontal col-md-8" role="form" action="" method="POST">
+        <div class="form-group">
+            <div class="col-md-12 text-right">
+                <button type="submit" class="btn btn-sm btn-outline-secondary">Message Me  &raquo;</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+{% endblock contacts %}

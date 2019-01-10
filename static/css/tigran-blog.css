@@ -92,3 +92,13 @@ h6 {
     font-size: 54px;
   }
 }
+
+.navbar-brand {
+   text-transform: uppercase;
+   font-size: 1.7rem;
+   text-shadow: 3px 2px 0px rgba(0, 0, 0, 0.12);
+}
+
+.navbar {
+   box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
+}

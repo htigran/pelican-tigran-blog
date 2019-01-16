@@ -18,7 +18,7 @@ $(function() {
             // get values from FORM
             var name = $("input#name").val();
             var email = $("input#email").val();
-            var phone = $("input#phone").val();
+            var subject = $("input#subject").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
@@ -26,11 +26,11 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "https://api.thetigran.com/contact-form",
                 type: "POST",
                 data: {
                     name: name,
-                    phone: phone,
+                    subject: subject,
                     email: email,
                     message: message
                 },
@@ -85,7 +85,7 @@ $('#name').focus(function() {
  // * License: MIT <http://opensource.org/licenses/mit-license.php> - see LICENSE file
  // *
  // * http://ReactiveRaven.github.com/jqBootstrapValidation/
- 
+
 
 (function( $ ){
 
@@ -557,7 +557,7 @@ $('#name').focus(function() {
                 // How many errors did we find?
                 if (settings.options.semanticallyStrict && errorsFound.length === 1) {
                   // Only one? Being strict? Just output it.
-                  $helpBlock.html(errorsFound[0] + 
+                  $helpBlock.html(errorsFound[0] +
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 } else {
                   // Multiple? Being sloppy? Glue them together into an UL.

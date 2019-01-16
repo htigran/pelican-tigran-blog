@@ -30,17 +30,18 @@ $(function() {
                 type: "POST",
                 crossDomain: true,
                 data: JSON.stringify({
+                    body: {
                     name: name,
                     subject: subject,
                     email: email,
                     message: message
-                }),
+                }}),
                 cache: false,
                 dataType: 'json',
                 contentType: "application/json",
                 headers: {
                     "accept": "application/json",
-                    "Access-Control-Allow-Origin":"thetigran.com"
+                    "Access-Control-Allow-Origin":"*"
                 },
                 success: function() {
                     // Success message

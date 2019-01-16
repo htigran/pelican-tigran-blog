@@ -28,13 +28,20 @@ $(function() {
             $.ajax({
                 url: "https://api.thetigran.com/contact-form",
                 type: "POST",
-                data: {
+                crossDomain: true,
+                data: JSON.stringify({
                     name: name,
                     subject: subject,
                     email: email,
                     message: message
-                },
+                }),
                 cache: false,
+                dataType: 'json',
+                contentType: "application/json",
+                headers: {
+                    "accept": "application/json",
+                    "Access-Control-Allow-Origin":"thetigran.com"
+                },
                 success: function() {
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");

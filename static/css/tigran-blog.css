@@ -102,3 +102,70 @@ h6 {
 .navbar {
    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
 }
+
+.subscribe {
+  background-color: #404040;
+  color: white;
+}
+
+.subscribe .subscribe-text::after {
+    position: absolute;
+    content: "\f003";
+    font-family: FontAwesome;
+    color: #313131;
+    z-index: 1;
+    top: -14px;
+    left: -4px;
+    font-size: 4em;
+    -webkit-transform: rotate(-50deg);
+    -ms-transform: rotate(-50deg);
+    transform: rotate(-50deg);
+}
+
+.subscribe .subscribe-text {
+    padding-left: 60px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.subscribe .subscribe-text::before {
+    content: '';
+    border-right: 1px solid #313131;
+    position: absolute;
+    right: 0;
+    top: -15px;
+    bottom: -15px;
+    border-width: 3px;
+}
+
+.subscribe .subscribe-form {
+    margin-top: 10px;
+}
+
+.subscribe .spam-text {
+    color: rgba(255,255,255,.9);
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.subscribe .subscribe-text h2, .subscribe .subscribe-text span {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.btn {
+    padding: 10px 35px;
+    line-height: 16px;
+}
+
+.intro-header .site-heading h1, .intro-header .page-heading h1 {
+    font-size: 50px;
+}
+
+.alert {
+  font-size: 14px;
+}

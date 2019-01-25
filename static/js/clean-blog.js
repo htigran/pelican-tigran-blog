@@ -8,7 +8,7 @@
 
 $(function() {
 
-    $("input,textarea").jqBootstrapValidation({
+    $("#contact-form input,textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
@@ -54,7 +54,7 @@ $(function() {
                         .append('</div>');
 
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $('#contact-form').trigger("reset");
                 },
                 error: function() {
                     // Fail message
@@ -64,7 +64,69 @@ $(function() {
                     $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
-                    $('#contactForm').trigger("reset");
+                    $('#contact-form').trigger("reset");
+                },
+            })
+        },
+        filter: function() {
+            return $(this).is(":visible");
+        },
+    });
+
+    $("a[data-toggle=\"tab\"]").click(function(e) {
+        e.preventDefault();
+        $(this).tab("show");
+    });
+});
+
+$(function() {
+
+    $("#subscription-form input,textarea").jqBootstrapValidation({
+        preventSubmit: true,
+        submitError: function($form, event, errors) {
+            // additional error messages or events
+        },
+        submitSuccess: function($form, event) {
+            event.preventDefault(); // prevent default submit behaviour
+            // get values from FORM
+            var email = $("input#subscriber-email").val();
+            $.ajax({
+                url: "https://api.thetigran.com/subscribe-form",
+                type: "POST",
+                crossDomain: true,
+                data: JSON.stringify({
+                    body: {
+                    email: email,
+                }}),
+                cache: false,
+                dataType: 'json',
+                contentType: "application/json",
+                headers: {
+                    "accept": "application/json",
+                    "Access-Control-Allow-Origin":"*"
+                },
+                success: function() {
+                    // Success message
+                    $('#subscription-response').html("<div class='alert alert-success'>");
+                    $('#subscription-response > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#subscription-response > .alert-success')
+                        .append("<strong>Your message has been sent. </strong>");
+                    $('#subscription-response > .alert-success')
+                        .append('</div>');
+
+                    //clear all fields
+                    $('#subscription-form').trigger("reset");
+                },
+                error: function() {
+                    // Fail message
+                    $('#subscription-response').html("<div class='alert alert-danger'>");
+                    $('#subscription-response > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#subscription-response > .alert-danger').append("<strong>Sorry, it seems that my server is not responding. Please try again later!");
+                    $('#subscription-response > .alert-danger').append('</div>');
+                    //clear all fields
+                    $('#subscription-form').trigger("reset");
                 },
             })
         },

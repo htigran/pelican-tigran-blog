@@ -8,7 +8,7 @@
 
 $(function() {
 
-    $("#contact-form input,textarea").jqBootstrapValidation({
+    $("#contact-form").find("input,textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
@@ -81,7 +81,7 @@ $(function() {
 
 $(function() {
 
-    $("#subscription-form input,textarea").jqBootstrapValidation({
+    $("#subscription-form").find("input,textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events

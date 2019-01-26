@@ -43,18 +43,22 @@ $(function() {
                     "accept": "application/json",
                     "Access-Control-Allow-Origin":"*"
                 },
+                beforeSend: function(e) {
+                  $("#contact-form-submit").val("Submitting...")
+                },
                 success: function() {
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
+                        .append("<strong>Your message has been sent.</strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
                     //clear all fields
                     $('#contact-form').trigger("reset");
+                    $("#contact-form-submit").val("Submit")
                 },
                 error: function() {
                     // Fail message
@@ -65,6 +69,7 @@ $(function() {
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contact-form').trigger("reset");
+                    $("#contact-form-submit").val("Submit")
                 },
             })
         },
@@ -105,18 +110,22 @@ $(function() {
                     "accept": "application/json",
                     "Access-Control-Allow-Origin":"*"
                 },
+                beforeSend: function(e) {
+                  $("#subscribe-button").val("Joining...")
+                },
                 success: function() {
                     // Success message
                     $('#subscription-response').html("<div class='alert alert-success'>");
                     $('#subscription-response > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#subscription-response > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
+                        .append("<strong>Thank You for Joining. </strong>");
                     $('#subscription-response > .alert-success')
                         .append('</div>');
 
                     //clear all fields
                     $('#subscription-form').trigger("reset");
+                    $("#subscribe-button").val("Join")
                 },
                 error: function() {
                     // Fail message
@@ -127,6 +136,7 @@ $(function() {
                     $('#subscription-response > .alert-danger').append('</div>');
                     //clear all fields
                     $('#subscription-form').trigger("reset");
+                    $("#subscribe-button").val("Join")
                 },
             })
         },

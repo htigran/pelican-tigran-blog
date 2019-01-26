@@ -126,6 +126,7 @@ h6 {
     padding-left: 60px;
     position: relative;
     margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .subscribe .subscribe-text::before {
@@ -139,7 +140,7 @@ h6 {
 }
 
 .subscribe .subscribe-form {
-    margin-top: 10px;
+    margin-top: 60px;
 }
 
 .subscribe .spam-text {
@@ -157,9 +158,13 @@ h6 {
     text-transform: uppercase;
 }
 
+#subscriber-email, #subscribe-button{
+  border:none;
+}
+
 .btn {
     padding: 10px 35px;
-    line-height: 16px;
+    line-height: 18px;
 }
 
 .intro-header .site-heading h1, .intro-header .page-heading h1 {

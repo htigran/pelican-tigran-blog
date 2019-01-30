@@ -160,18 +160,18 @@
           <div class="modal-body">
             <form id="contact-form" class="custom_form_body">
               <div class="form-group">
-                <input type="text" class="form-control" id="name" placeholder="Name">
+                <input type="text" class="form-control" id="name" placeholder="Name" maxlength="255" required>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input type="email" class="form-control" id="email" placeholder="Email" maxlength="255" required>
               </div>
 
               <div class="form-group">
-                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                <input type="text" class="form-control" id="subject" placeholder="Subject" maxlength="255" required>
               </div>
 
               <div class="form-group mt-2">
-                <textarea name="message" id="message" rows="6" class="form-control" placeholder="Your message..."></textarea>
+                <textarea name="message" id="message" rows="6" class="form-control" placeholder="Your message..." maxlength="8192" required></textarea>
               </div>
               <div id="success"></div>
               <div>
